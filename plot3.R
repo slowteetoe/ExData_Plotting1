@@ -1,6 +1,10 @@
-# Obtain the appropriate data subset, including headers by running the following from a unix/linux/osx command line:
+# Uncomment the following two lines to download and unzip the file
+# download.file(url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile="household_power_consumption.zip", method="curl")
+# unzip("household_power_consumption.zip")
+
+# Copy the appropriate data subset, including headers, into a file called 'data.txt' by running the following from a unix/linux/osx command line:
 # head -n 1 household_power_consumption.txt > data.txt; cat household_power_consumption.txt | grep "^[12]/2/2007" >> data.txt
-# This will create a file named 'data.txt'
+
 library(data.table)
 
 rm(list=ls())

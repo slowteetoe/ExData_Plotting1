@@ -1,5 +1,4 @@
 # Uncomment the following two lines to download and unzip the file
-
 # download.file(url="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile="household_power_consumption.zip", method="curl")
 # unzip("household_power_consumption.zip")
 
