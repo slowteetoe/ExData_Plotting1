@@ -16,7 +16,7 @@ suppressWarnings(
 )
 dt[,datetime:=d[,dtobj]]
 
-png("plot4.png", width=480, height=480, units="px")
+png("plot4.png", width=480, height=480, units="px", bg = "transparent")
 
 # 2 rows, 2 cols of graphs
 par(mfrow=c(2,2))
