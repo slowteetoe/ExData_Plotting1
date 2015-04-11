@@ -7,9 +7,8 @@
 
 library(data.table)
 
-rm(list=ls())
 dt <- fread("data.txt", sep=";", na.strings="?")
-# handle date/time
+
 dtobj <- strptime(paste(dt$Date,dt$Time),format="%d/%m/%Y %H:%M:%S", tz="")
 # not sure why, but data.table doesn't like POSIXlt so this was an easy way to fix
 suppressWarnings(

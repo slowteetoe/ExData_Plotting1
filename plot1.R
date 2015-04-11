@@ -5,8 +5,6 @@
 # Copy the appropriate data subset, including headers, into a file called 'data.txt' by running the following from a unix/linux/osx command line:
 # head -n 1 household_power_consumption.txt > data.txt; cat household_power_consumption.txt | grep "^[12]/2/2007" >> data.txt
 
-rm(list=ls())
-
 library(data.table)
 
 data <- fread("data.txt", sep=";", na.strings="?")

@@ -7,7 +7,6 @@
 
 library(data.table)
 
-rm(list=ls())
 dt <- fread("data.txt", sep=";", na.strings="?")
 # handle date/time
 dtobj <- strptime(paste(dt$Date,dt$Time),format="%d/%m/%Y %H:%M:%S", tz="")
@@ -16,6 +15,8 @@ suppressWarnings(
 	d <- data.table(dtobj)
 )
 dt[,datetime:=d[,dtobj]]
+
 plot(dt$datetime, dt$Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type="l")
+
 dev.copy(png, "plot2.png", width=480, height=480, units="px", res=100)
 dev.off()
